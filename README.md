@@ -22,20 +22,20 @@ Make sure you have python installed. Recommended is 3.9.
 You already have Camunda platform running on `http://localhost:8080`. You can find installation instractions at 
 [Camunda Documentation](https://docs.camunda.org/manual/latest/introduction/downloading-camunda/#download-the-runtime).
 
-## 1. Install Robot Framework and CamundaLibrary
+### 1. Install Robot Framework and CamundaLibrary
 Run
 ```shell
 pip install robotframework-camunda
 ```
 `robotframework-camunda` will automatically pull the apropriate version of Robot Framework.
 
-## 2. Upload demo model
+### 2. Upload demo model
 While having Camunda platform running, upload the model by running:
 ```shell
 robot -d logs tests/demo_upload_model.robot
 ```
 
-## 3. Start demo process
+### 3. Start demo process
 Produce a few demo process instances by running:
 ```shell
 robot -d logs tests/demo_producer.robot
@@ -43,7 +43,7 @@ robot -d logs tests/demo_producer.robot
 You can verify in Camunda cockpit that you now have demo tokens waiting in the process:
 ![Demo instances in process](./images/1-demo-tokens-in-process.png)
 
-## 3. Start Robotframework webservice
+### 3. Start Robotframework webservice
 First install robotframework-webservice with pip
 ```shell
 pip install robotframework-webservice
@@ -59,7 +59,7 @@ and start the webservice while providing the demo consumer:
 The last call starts the webservice listening on port *5004* and having *tests/demo_consumer.robot* ready to be 
 executed.
 
-## 4. Start Catow
+### 4. Start Catow
 Install Catow dependencies with:
 ```shell
 pip install -r requirements.txt
@@ -69,7 +69,7 @@ Start catow with
 python -m Catow.main
 ```
 
-## 5. Review the output from Catow
+### 5. Review the output from Catow
 Catow should produce the following output:
 ```log
 INFO:     Started server process [15228]
