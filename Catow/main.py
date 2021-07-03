@@ -61,7 +61,7 @@ def main():
     parser.add_argument("-c", "--camundaurl", default='http://localhost:8080', help="URL of Camunda platform")
     parser.add_argument("-t", "--topic", default="aTopic", type=str,
                         help="Topic of service task to listen for on Camunda")
-    parser.add_argument("-r", "--roboturl", default='http://localhost:5004', type=str,
+    parser.add_argument("-r", "--roboturl", default='http://localhost:5004/robotframework/run/all', type=str,
                         help="Url to be called when workload is detected")
     #parser.add_argument('--version', action='version', version=f'Camunda Topic Watcher Webservice {get_version()}')
     parser.add_argument("-i", "--interval", default=3, type=int,
