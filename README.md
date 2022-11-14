@@ -21,8 +21,9 @@ python -m Catow.main -t <topic to be subsribed to> -r <url to be triggered>
 ```
 
 You can also add:
-- `-p` specifying the port Camunda Topic Watcher should run on (used later for heath checks)
-- `-i` definying the polling interval in seconds
+- `-p` specifying the port Camunda Topic Watcher should run on (used later for heath checks) (default: 5003)
+- `-i` definying the polling interval in seconds (default: 3 seconds)
+- `-c` setting the url to Camunda (default: `http://localhost:8080)`
 
 ## Concept
 Catow is under development and currently in Alpha.
