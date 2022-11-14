@@ -6,6 +6,14 @@ If so, an HTTP-GET is triggered. In combination with
 When the robot tasks uses [CamundaLibrary](https://github.com/MarketSquare/robotframework-camunda), 
 it can consume the token provided by Camunda.
 
+## Installation
+
+Camunda Topic Watcher is not yet available on pypi. But you can install it directly from github:
+
+```
+pip install git+https://github.com/Noordsestern/catow.git
+```
+
 ## Concept
 Catow is under development and currently in Alpha.
 
