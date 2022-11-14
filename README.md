@@ -14,6 +14,16 @@ Camunda Topic Watcher is not yet available on pypi. But you can install it direc
 pip install git+https://github.com/Noordsestern/catow.git
 ```
 
+## Usage
+
+```
+python -m Catow.main -t <topic to be subsribed to> -r <url to be triggered>
+```
+
+You can also add:
+- `-p` specifying the port Camunda Topic Watcher should run on (used later for heath checks)
+- `-i` definying the polling interval in seconds
+
 ## Concept
 Catow is under development and currently in Alpha.
 
