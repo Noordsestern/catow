@@ -32,7 +32,7 @@ def run_server():
 async def watch_topic():
     while True:
         try:
-            response = requests.get(f'{CatowConfig().cmd_args.camundaurl}/engine-rest/external-task/count?topicName={CatowConfig().cmd_args.topic}')
+            response = requests.get(f'{CatowConfig().cmd_args.camundaurl}/engine-rest/external-task/count?topicName={CatowConfig().cmd_args.topic}&notlocked=true&active=true&withRetriesLeft=true')
             response.raise_for_status()
             print(response.text)
             response_body = json.loads(response.text)
