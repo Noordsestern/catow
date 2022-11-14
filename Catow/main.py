@@ -34,18 +34,19 @@ async def watch_topic():
         try:
             response = requests.get(f'{CatowConfig().cmd_args.camundaurl}/engine-rest/external-task/count?topicName={CatowConfig().cmd_args.topic}&notlocked=true&active=true&withRetriesLeft=true')
             response.raise_for_status()
-            print(response.text)
+            #print(response.text)
             response_body = json.loads(response.text)
             count = response_body["count"]
             if count > 0:
-                print("Start Robot!")
+                print(f"Start Robot for amount of process instances: {count}")
                 try:
                     response = requests.get(CatowConfig().cmd_args.roboturl)
                     response.raise_for_status()
                 except Exception as e:
                     print(f'[WARN] Failed to trigger robot:\n{e}')
             else:
-                print("Nothing to do here.")
+                #print("Nothing to do here.")
+                pass
         except Exception as e:
             print(f'Failed to contact Camunda:\n{e}')
 
