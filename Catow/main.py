@@ -70,6 +70,7 @@ def main():
     args = parser.parse_args()
 
     CatowConfig().cmd_args = args
+    print(f"Camunda Topic Watcher configured:\n{CatowConfig().cmd_args}")
 
     run_server()
 
