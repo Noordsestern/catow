@@ -1,9 +1,7 @@
-FROM python:3-alpine AS GIT_ALPINE
+FROM python:3-alpine 
 
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
-
-FROM GIT_ALPINE AS CATOW
 
 ENV CAMUNDA_TOPIC ""
 ENV POLLING_INTERVAL 3
