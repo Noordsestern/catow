@@ -38,7 +38,7 @@ docker pull ghcr.io/noordsestern/catow:master
 ## Usage
 
 ```
-docker run -d --name catow --env CAMUNDA_TOPIC=<external task topic> --env SERVICE_PORT=5004 --env DESTINATION_URL=<my-destination-rul> --env POLLING_INTERVAL=10 ghcr.io/noordsestern/catow:master
+docker run -d --name catow --env CAMUNDA_TOPIC=<external task topic> --env DESTINATION_URL=<my-destination-rul> --env POLLING_INTERVAL=10 ghcr.io/noordsestern/catow:master
 ```
 
 ## Concept
