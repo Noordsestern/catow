@@ -6,6 +6,8 @@ If so, an HTTP-GET is triggered. In combination with
 When the robot tasks uses [CamundaLibrary](https://github.com/MarketSquare/robotframework-camunda), 
 it can consume the token provided by Camunda.
 
+# Run with Python
+
 ## Installation
 
 Camunda Topic Watcher is not yet available on pypi. But you can install it directly from github:
@@ -24,6 +26,20 @@ You can also add:
 - `-p` specifying the port Camunda Topic Watcher should run on (used later for heath checks) (default: 5003)
 - `-i` definying the polling interval in seconds (default: 3 seconds)
 - `-c` setting the url to Camunda (default: `http://localhost:8080)`
+
+# Run with Docker
+
+## Installation
+
+```
+docker pull ghcr.io/noordsestern/catow:master
+```
+
+## Usage
+
+```
+docker run -d --name catow --env CAMUNDA_TOPIC=<external task topic> --env SERVICE_PORT=5004 --env DESTINATION_URL=<my-destination-rul> --env POLLING_INTERVAL=10 ghcr.io/noordsestern/catow:master
+```
 
 ## Concept
 Catow is under development and currently in Alpha.
