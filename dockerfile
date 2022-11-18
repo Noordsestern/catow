@@ -13,4 +13,4 @@ RUN pip install .
 
 EXPOSE 5003
 
-ENTRYPOINT exec python3 -m Catow.main -t ${CAMUNDA_TOPIC} -r ${DESTINATION_URL} -p 5003 -i ${POLLING_INTERVAL}
+ENTRYPOINT exec python3 -m Catow.main -t ${CAMUNDA_TOPIC} -r ${DESTINATION_URL} -p 5003 -i ${POLLING_INTERVAL} -c ${CAMUNDA_URL}
