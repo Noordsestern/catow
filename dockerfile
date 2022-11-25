@@ -7,10 +7,11 @@ ENV CAMUNDA_TOPIC ""
 ENV POLLING_INTERVAL 3
 ENV CAMUNDA_URL http://localhost:8080
 ENV DESTINATION_URL "https://github.com/Noordsestern/catow"
+ENV PORT 5003
 
 ADD . .
 RUN pip install .
 
-EXPOSE 5003
+EXPOSE ${PORT}
 
-ENTRYPOINT exec python3 -m Catow.main -t ${CAMUNDA_TOPIC} -r ${DESTINATION_URL} -p 5003 -i ${POLLING_INTERVAL} -c ${CAMUNDA_URL}
+ENTRYPOINT exec python3 -m Catow.main -t ${CAMUNDA_TOPIC} -r ${DESTINATION_URL} -p ${PORT} -i ${POLLING_INTERVAL} -c ${CAMUNDA_URL}
